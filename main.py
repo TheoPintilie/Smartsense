@@ -20,6 +20,8 @@ S = librosa.feature.melspectrogram(y=y, sr=sr, n_fft=n_fft, hop_length=hop_lengt
 S_dB = librosa.power_to_db(S, ref=np.max)
 S_dB = S_dB.reshape((n_mels, 130, 1))
 
+# 130 - data shape
+
 # Define the threshold for the minimum confidence prediction
 threshold = 0.7
 
